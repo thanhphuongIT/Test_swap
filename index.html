@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Swap Demo</title>
+    <script src="https://terminal.jup.ag/main-v4.js" data-preload></script>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        background-color: #002e3b;
+      }
+      h1 {
+        padding: 20px;
+        font-size: 24px;
+        color: white;
+      }
+      #integrated-terminal {
+        padding: 10px;
+        border-radius: 20px;
+        background-color: #304256;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="integrated-terminal">
+      <!-- Add This 👇 -->
+      <script>
+        window.Jupiter.init({
+          displayMode: "integrated",
+          integratedTargetId: "integrated-terminal",
+          // 👇 REPLACE THIS WITH YOUR OWN HTTP PROVIDER ENDPOINT
+          endpoint:
+            "https://soft-empty-mansion.solana-devnet.quiknode.pro/1bf2d3e84555e6515edab5b2c8b3f9d48a3219e0",
+          formProps: {
+            fixedOutputMint: false,
+          },
+        });
+      </script>
+    </div>
+  </body>
+</html>
